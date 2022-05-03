@@ -4,7 +4,7 @@
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Casual Cavemen",
   "SYMBOL": "CAVE",
@@ -16,3 +16,4 @@
   "MARKETPLACE_LINK": "https://opensea.io/collection/casual-cavemen",
   "SHOW_BACKGROUND": true
 }
+ 
