@@ -208,10 +208,10 @@ function App() {
         flex={1}
         ai={"center"}      //change placement of the logo (right = top left of page)
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bgplain.png" : null}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/newBG.jpg" : null}
       >
-          <StyledLogo alt={"logo"} src={"/config/images/logo2.png"} />
- 
+       <s.SpacerLarge/>
+ <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
      
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
