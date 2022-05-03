@@ -12,13 +12,13 @@ export const StyledButton = styled.button`
   padding: 10px;
   border-radius: 50px;
   border: none;
-  background-color: var(--secondary);
+  background-color: var(--accent-new);
   padding: 40px;
   font-weight: bold;
   color: var(--secondary-text);
   width: 250px;                                                       
   cursor: pointer;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  box-shadow: 12px 42px 2px 1px rgba(0, 0, 255, 0.2);
   -webkit-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   -moz-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   :active {
@@ -38,10 +38,10 @@ export const StyledRoundButton = styled.button`
   background-color: var(--primary);
   padding: 10px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 25px;
   color: var(--primary-text);
-  width: 100px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@ export const ResponsiveWrapper = styled.div`
   flex-direction: column;
   justify-content: stretched;
   align-items: stretched;
-  width: 80%;
+  width: 100%;
   @media (min-width: 767px) {
     flex-direction: row;
   }
@@ -72,9 +72,9 @@ export const ResponsiveWrapper = styled.div`
 //67 alignment of media row colum etc
 
 export const StyledLogo = styled.img`
-  width: 200px;
+  width: 400px;
   @media (min-width:300px) {
-    width: 250px;
+    width: 350px;
   }
   transition: width 0.5s;
   transition: height 0.5s;
@@ -82,16 +82,16 @@ export const StyledLogo = styled.img`
 //75 -77 logo adjustment settings
 
 export const StyledImg = styled.img`
-  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border: 4px solid var(--accent);
+  box-shadow: 0px 35px 11px 2px rgba(0, 0, 0, 0.7);
+  border: 8px solid var(--accent);
   background-color: var(--accent);
   border-radius: 100%;
-  width: 200px;
+  width: 500px;
   @media (min-width: 900px) {
-    width: 250px;
+    width: 400px;
   }
   @media (min-width: 1000px) {
-    width: 250px;
+    width: 400px;
   }
   transition: width 0.5s;
 `;
@@ -171,8 +171,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 3) {
-      newMintAmount = 3;
+    if (newMintAmount > 10) {
+      newMintAmount = 10;
     }
     setMintAmount(newMintAmount);
   };
@@ -207,27 +207,18 @@ function App() {
       <s.Container
         flex={1}
         ai={"center"}      //change placement of the logo (right = top left of page)
-        style={{ padding: 100, backgroundColor: "var(--primary)" }}      //   <StyledImg alt={"example"} src={"/config/images/example.gif"} />     image code
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg1.png" : null} //  <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />      logo code
+        style={{ padding: 24, backgroundColor: "var(--primary)" }}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bgplain.png" : null}
       >
-
-
-      
-
-          <s.Container flex={1} jc={"center"} ai={"end"}>
-        <s.SpacerLarge/>
-          <StyledImg alt={"example"} src={"/config/images/preview.gif"}style={{ transform: "scaleX(-1)" }} />
-          </s.Container>
-  
-        <s.SpacerLarge/>
-
+          <StyledLogo alt={"logo"} src={"/config/images/logo2.png"} />
+ 
+     
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"top"}>
-
-          <img alt={"logo"} src={"/config/images/5.png"} width="100%"/> 
+          <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+           
           </s.Container>
-         
           <s.SpacerLarge />
           <s.Container
             flex={2}
@@ -238,7 +229,7 @@ function App() {
               padding: 24,
               borderRadius: 24,
               border: "4px solid var(--secondary)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+              boxShadow: "0px 25px 15px 2px rgba(0,0,0,0.7)",
             }}
           >
             <s.TextTitle
@@ -249,7 +240,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              Spread the Love!
+              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -389,22 +380,24 @@ function App() {
               </>
             )}
             <s.SpacerMedium />
-          </s.Container>        
-          <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}> 
-          
-          <s.Container flex={1} jc={"center"} ai={"start"}>
-        <s.SpacerLarge/>
-        <img alt={"logo"} src={"/config/images/4.png"} width="60%"/>
+            
           </s.Container>
-  
+        
+          <s.SpacerLarge/>  <s.SpacerLarge/>  <s.SpacerLarge/>
+          <s.SpacerLarge/>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <StyledImg
+              alt={"example"}
+              src={"/config/images/example.gif"}
+           
+            />
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription
             style={{
-              textAlign: "center",          //  reverse gif code     <StyledImg alt={"example"} src={"/config/images/example.gif"} style={{ transform: "scaleX(-1)" }} />
+              textAlign: "center",
               color: "var(--primary-text)",
               boxShadow: "0px 5px 11px 2px rgba(0, 0, 0, 0.7)",
               border: "4px solid var(--primary)",
@@ -428,7 +421,7 @@ function App() {
               //adjusted bottom text bar 2  
             }}
           >
-            - Onboarding people with the perfect FREE opertunity to get into NFTs -
+            - Welcome to the CAVE -
           </s.TextDescription>
         </s.Container>
       </s.Container>
