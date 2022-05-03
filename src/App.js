@@ -211,7 +211,7 @@ function App() {
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/newBG.jpg" : null}
       >
        <s.SpacerLarge/>
- <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
+ <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
      
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
