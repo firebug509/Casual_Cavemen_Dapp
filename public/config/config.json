@@ -4,14 +4,14 @@
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Casual Cavemen",
   "SYMBOL": "CAVE",
   "MAX_SUPPLY": 111,
   "WEI_COST": 90000000000000000,
   "DISPLAY_COST": 0.09,
-  "GAS_LIMIT": 230000,
+  "GAS_LIMIT": 180000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://opensea.io/collection/casual-cavemen",
   "SHOW_BACKGROUND": true
